@@ -17,3 +17,10 @@
 {"timestamp":5334319,"category":"nimbus_events","name":"database_write","extra":{"glean_timestamp":"1784861306343","success":"true"}}
 {"timestamp":5337588,"category":"normandy","name":"expose_nimbus_experiment","extra":{"featureId":"newtabTrainhopAddon","branchSlug":"rollout","glean_timestamp":"1784861309612","value":"new-tab-15482026071643450-to-release-152-wcw-v9"}}
 {"timestamp":5337588,"category":"nimbus_events","name":"exposure","extra":{"glean_timestamp":"1784861309612","branch":"rollout","experiment":"new-tab-15482026071643450-to-release-152-wcw-v9","feature_id":"newtabTrainhopAddon"}}
+{"timestamp":7711269,"category":"devtools.main","name":"open_tools","extra":{"first_panel":"inspector","entrypoint":"KeyShortcut","splitconsole":"false","host":"bottom","width":"950","shortcut":"accel+shift+C","session_id":"-1","glean_timestamp":"1784863683293"}}
+{"timestamp":7711269,"category":"devtools.main","name":"enter_inspector","extra":{"host":"bottom","panel_name":"inspector","session_id":"-1","start_state":"initial_panel","cold":"true","width":"950","glean_timestamp":"1784863683293"}}
+{"timestamp":7712082,"category":"devtools.main","name":"tool_timer_layoutview","extra":{"glean_timestamp":"1784863684106","time_open":"1363","session_id":"2378752","os":"Linux 7.1.3-201.fc44.x86_64"}}
+{"timestamp":7712088,"category":"devtools.main","name":"tool_timer_ruleview","extra":{"os":"Linux 7.1.3-201.fc44.x86_64","glean_timestamp":"1784863684111","session_id":"2378752","time_open":"1386"}}
+{"timestamp":7712099,"category":"devtools.main","name":"exit_inspector","extra":{"panel_name":"inspector","next_panel":"none","glean_timestamp":"1784863684123","width":"950","session_id":"2378752","host":"bottom","reason":"toolbox_close"}}
+{"timestamp":7712099,"category":"devtools.main","name":"close_tools","extra":{"session_id":"2378752","width":"950","host":"bottom","glean_timestamp":"1784863684123"}}
+{"timestamp":8145676,"category":"downloads","name":"added_file_extension","extra":{"glean_timestamp":"1784864117700","value":"other"}}

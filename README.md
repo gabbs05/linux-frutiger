@@ -155,3 +155,64 @@ Esta es la bitácora paso a paso de la construcción del entorno de trabajo y si
   ```bash
   systemctl --user restart pipewire wireplumber
   ```
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+  # ⌨️ Atajos de Teclado - Entorno Hyprland (Frutiger Aero)
+
+Este documento detalla todos los atajos de teclado (keybindings) configurados en el sistema Hyprland, organizados por categoría para facilitar su consulta.
+
+> **Nota:** La tecla principal (`$mainMod`) está configurada como la tecla **SUPER** (normalmente la tecla con el logo de Windows).
+
+## 🚀 Sistema y Aplicaciones
+| Atajo | Función | Comando / Acción |
+| :--- | :--- | :--- |
+| `SUPER` + `Q` | Abrir Terminal | Ejecuta `kitty` |
+| `SUPER` + `E` | Abrir Gestor de Archivos | Ejecuta `dolphin` |
+| `SUPER` + `R` | Abrir Lanzador de Aplicaciones | Ejecuta `rofi -show drun` |
+| `SUPER` + `X` | Abrir Gestor de Máquinas Virtuales | Ejecuta `virt-manager` |
+| `CTRL` + `SHIFT` + `ESC` | Abrir Monitor del Sistema | Ejecuta `gnome-system-monitor` |
+| `SUPER` + `M` | Menú de Apagado / Salir | Ejecuta `hyprshutdown` o sale de Hyprland si no está instalado |
+| `SUPER` + `SHIFT` + `R` | Recargar Configuración | Ejecuta `hyprctl reload` |
+
+## 🪟 Gestión de Ventanas
+| Atajo | Función | Comando / Acción |
+| :--- | :--- | :--- |
+| `SUPER` + `C` | Cerrar Ventana Activa | `killactive` |
+| `SUPER` + `V` | Alternar Modo Flotante | `togglefloating` |
+| `SUPER` + `P` | Alternar Modo Pseudo-tiling | `pseudo` (Layout Dwindle) |
+| `SUPER` + `J` | Alternar División (Split) | `layoutmsg, togglesplit` (Layout Dwindle) |
+| `SUPER` + `Flechas (← ↑ → ↓)` | Mover el Foco | Navega entre las ventanas abiertas |
+
+## 🖥️ Espacios de Trabajo (Workspaces)
+| Atajo | Función |
+| :--- | :--- |
+| `SUPER` + `1` al `0` | Cambiar al espacio de trabajo (del 1 al 10) |
+| `SUPER` + `SHIFT` + `1` al `0` | Mover la ventana activa al espacio de trabajo (del 1 al 10) |
+| `SUPER` + `S` | Mostrar/Ocultar espacio de trabajo especial (Magic/Scratchpad) |
+| `SUPER` + `SHIFT` + `O` | Enviar ventana activa al espacio de trabajo especial (Magic) |
+| `SUPER` + `Rueda del Ratón` | Desplazarse secuencialmente por los espacios de trabajo activos |
+
+## 🖱️ Control con el Ratón
+| Atajo | Función |
+| :--- | :--- |
+| `SUPER` + `Clic Izquierdo` (Mantener) | Mover la ventana libremente arrastrándola |
+| `SUPER` + `Clic Derecho` (Mantener) | Redimensionar la ventana arrastrando |
+
+## 📸 Capturas de Pantalla
+| Atajo | Función | Destino |
+| :--- | :--- | :--- |
+| `Impr Pant` (Print Screen) | Captura de pantalla completa | `~/Imágenes/Capturas/` |
+| `SUPER` + `SHIFT` + `S` | Captura de una región seleccionada | `~/Imágenes/Capturas/` |
+
+## 🎵 Multimedia y Control de Sistema
+| Tecla Especial | Función |
+| :--- | :--- |
+| `Subir Volumen` | Aumenta el volumen general (5%) |
+| `Bajar Volumen` | Disminuye el volumen general (5%) |
+| `Silenciar (Mute)` | Activa/Desactiva el sonido general |
+| `Silenciar Micrófono` | Activa/Desactiva la captura del micrófono |
+| `Subir Brillo` | Aumenta el brillo de la pantalla (5%) |
+| `Bajar Brillo` | Disminuye el brillo de la pantalla (5%) |
+| `Siguiente` | Avanza a la siguiente pista multimedia |
+| `Anterior` | Retrocede a la pista multimedia anterior |
+| `Play / Pause` | Reproduce o pausa el contenido multimedia |
