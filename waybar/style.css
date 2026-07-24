@@ -1,0 +1,46 @@
+* {
+    /* Tipografía limpia y definida */
+    font-family: "Segoe UI", "Ubuntu", sans-serif;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+window#waybar {
+/* El efecto de cristal: un gradiente semitransparente */
+    background: linear-gradient(180deg, rgba(162, 212, 245, 0.8) 0%, rgba(85, 172, 238, 0.5) 100%);
+    border: 1px solid rgba(255, 255, 255, 0.5); /* Borde de cristal */
+    border-radius: 12px; /* Esto redondea las esquinas maestras */
+    color: #ffffff;
+    /* Sombra en el texto para que resalte sobre fondos claros */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+/* Las "cápsulas" donde van los botones */
+.modules-right, .modules-center, .modules-left {
+    background-color: rgba(255, 255, 255, 0.25);
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    border-radius: 12px;
+    margin: 4px 6px;
+    padding: 2px 8px;
+    /* Un brillo interior para darle ese efecto "gominola" 3D */
+    box-shadow: inset 0px 1px 3px rgba(255, 255, 255, 0.9);
+}
+
+/* Espaciado para los iconos individuales */
+#custom-vpn, #pulseaudio, #network, #battery, #clock, #tray {
+    padding: 0 6px;
+    color: #ffffff;
+}
+
+/* Efecto al pasar el mouse por encima de los iconos de los escritorios */
+#workspaces button {
+    color: #ffffff;
+    padding: 0 4px;
+    transition: all 0.2s ease;
+}
+
+#workspaces button:hover {
+    background-color: rgba(255, 255, 255, 0.4);
+    border-radius: 8px;
+    box-shadow: inset 0px 1px 2px rgba(255, 255, 255, 0.8);
+}

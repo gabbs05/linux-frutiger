@@ -1,0 +1,72 @@
+configuration {
+    modi: "drun";
+    show-icons: true;
+    icon-theme: "Oxygen";
+    font: "Ubuntu 12";
+}
+
+* {
+    /* Definición de colores translúcidos (Hexadecimal + Opacidad) */
+    transparente: #00000000;
+    cristal-fondo: #a2d4f5b3;
+    cristal-borde: #ffffff99;
+    cristal-lista: #ffffff4d;
+
+    /* Regla global para evitar fondos negros indeseados */
+    background-color: @transparente;
+    text-color: #222222;
+}
+
+window {
+    width: 700px;
+    location: north;
+    anchor: northeast;
+    x-offset: 15px;      /* Margen izquierdo */
+    y-offset: 10px;     /* Margen inferior: súbelo o bájalo para que no pise tu barra */
+    border-radius: 12px;
+    /* En RASI, el borde se define así: */
+    border: 1px;
+    border-color: @cristal-borde;
+    background-color: @cristal-fondo;
+    padding: 15px;
+}
+
+mainbox {
+    spacing: 10px;
+}
+
+inputbar {
+    background-color: @cristal-borde;
+    border-radius: 8px;
+    padding: 10px;
+}
+
+prompt, entry {
+    text-color: #333333;
+}
+
+listview {
+    background-color: @cristal-lista;
+    border-radius: 8px;
+    padding: 10px;
+    lines: 10;
+}
+
+element {
+    padding: 8px;
+    border-radius: 6px;
+}
+
+element-text, element-icon {
+    padding: 0px 8px 0px 0px;
+}
+
+element selected {
+    background-color: #55aceecc; /* Azul brillante aero */
+    border: 1px;
+    border-color: #ffffffcc;
+}
+
+element-text selected {
+    text-color: #ffffff;
+}
