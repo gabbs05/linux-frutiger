@@ -22,22 +22,21 @@
     ],
 
     "modules-left": [
-        "hyprland/workspaces",
-        "wlr/taskbar"
+        "hyprland/workspaces",       
     ],
 
     "hyprland/workspaces": {
         "disable-scroll": true,
         "all-outputs": true,
-        "tooltip": false
-    },
-
-    "wlr/taskbar": {
-        "format": "{icon}",
-        "spacing": 3,
-        "icon-size": 20,
-        "on-click": "activate",
-        "tooltip-format": "{title}"
+        "tooltip": false,
+        "format": "{name} {windows}",
+        "format-window-separator": " ",
+        "workspace-taskbar": {
+            "enable": true,
+            "format": "{icon}",
+            "icon-size": 20,
+            "tooltip-format": "{title}"
+        }
     },
 
     "tray": {
