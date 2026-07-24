@@ -6,12 +6,12 @@
 }
 
 window#waybar {
-/* El efecto de cristal: un gradiente semitransparente */
-    background: linear-gradient(180deg, rgba(162, 212, 245, 0.8) 0%, rgba(85, 172, 238, 0.5) 100%);
-    border: 1px solid rgba(255, 255, 255, 0.5); /* Borde de cristal */
+    /* Gradiente ajustado para coincidir con el fondo azul oscuro de Rofi */
+    background: linear-gradient(180deg, rgba(0, 40, 80, 0.6) 0%, rgba(0, 40, 80, 0.3) 100%);
+    border: 1px solid rgba(255, 255, 255, 0.3); /* Borde de cristal sutil */
     border-radius: 12px; /* Esto redondea las esquinas maestras */
     color: #ffffff;
-    /* Sombra en el texto para que resalte sobre fondos claros */
+    /* Sombra en el texto para que resalte sobre el fondo */
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
 }
 

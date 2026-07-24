@@ -3,28 +3,39 @@ configuration {
     show-icons: true;
     icon-theme: "Oxygen";
     font: "Ubuntu 12";
+    display-drun: "Buscador:";
 }
 
 * {
-    /* Definición de colores translúcidos (Hexadecimal + Opacidad) */
+    /* Conversión de tus colores RGBA del CSS a Hexadecimal con Opacidad (Aero Glass) */
     transparente: #00000000;
-    cristal-fondo: #a2d4f5b3;
-    cristal-borde: #ffffff99;
-    cristal-lista: #ffffff4d;
+    
+    /* Fondo principal: rgba(0, 40, 80, 0.4) -> #00285066 */
+    cristal-fondo: #00285066; 
+    
+    /* Bordes de cristal: rgba(255, 255, 255, 0.2) -> #ffffff33 */
+    cristal-borde: #ffffff33; 
+    
+    /* Fondo del buscador: rgba(255, 255, 255, 0.1) -> #ffffff1a */
+    cristal-input: #ffffff1a; 
+    
+    /* Efecto de selección brillante (reemplazo del gradiente) */
+    seleccion-fondo: #0088ff66; 
+    seleccion-borde: #ffffff66;
+    
+    /* Colores de texto */
+    texto-normal: #ffffffcc;
+    texto-seleccion: #ffffffff;
 
-    /* Regla global para evitar fondos negros indeseados */
+    /* Reglas globales */
     background-color: @transparente;
-    text-color: #222222;
+    text-color: @texto-normal;
 }
 
 window {
-    width: 700px;
-    location: north;
-    anchor: northeast;
-    x-offset: 15px;      /* Margen izquierdo */
-    y-offset: 10px;     /* Margen inferior: súbelo o bájalo para que no pise tu barra */
-    border-radius: 12px;
-    /* En RASI, el borde se define así: */
+    width: 35%;
+    location: north; /* Centrado en pantalla */
+    border-radius: 20px;
     border: 1px;
     border-color: @cristal-borde;
     background-color: @cristal-fondo;
@@ -33,20 +44,25 @@ window {
 
 mainbox {
     spacing: 10px;
+    background-color: @transparente;
 }
 
 inputbar {
-    background-color: @cristal-borde;
-    border-radius: 8px;
+    background-color: @cristal-input;
+    border-radius: 10px;
+    border: 1px;
+    border-color: @cristal-borde;
     padding: 10px;
+    margin: 10px;
 }
 
 prompt, entry {
-    text-color: #333333;
+    text-color: @texto-seleccion;
+    background-color: @transparente;
 }
 
 listview {
-    background-color: @cristal-lista;
+    background-color: @transparente;
     border-radius: 8px;
     padding: 10px;
     lines: 10;
@@ -54,19 +70,22 @@ listview {
 
 element {
     padding: 8px;
-    border-radius: 6px;
+    border-radius: 10px;
+    background-color: @transparente;
 }
 
 element-text, element-icon {
     padding: 0px 8px 0px 0px;
+    background-color: @transparente;
+    text-color: inherit;
 }
 
 element selected {
-    background-color: #55aceecc; /* Azul brillante aero */
+    background-color: @seleccion-fondo;
     border: 1px;
-    border-color: #ffffffcc;
+    border-color: @seleccion-borde;
 }
 
 element-text selected {
-    text-color: #ffffff;
+    text-color: @texto-seleccion;
 }
