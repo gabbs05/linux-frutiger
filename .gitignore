@@ -1,0 +1,44 @@
+# =======================================================
+# 1. Ignorar absolutamente todo en la raíz por defecto
+# =======================================================
+/*
+
+# =======================================================
+# 2. Excepciones principales (Permitir entrar a estas carpetas)
+# =======================================================
+!.gitignore
+!.config/
+!.local/
+
+# =======================================================
+# 3. LISTA BLANCA DE .CONFIG
+# =======================================================
+# Ignorar todo el contenido de .config por defecto...
+.config/*
+
+# ...Y permitir SOLO las carpetas de nuestra interfaz:
+!.config/hypr/
+!.config/kitty/
+!.config/waybar/
+!.config/rofi/
+!.config/swayosd/
+!.config/wireplumber/
+!.config/gtk-3.0/
+!.config/gtk-4.0/
+!.config/nwg-look/
+
+# =======================================================
+# 4. LISTA BLANCA DE .LOCAL
+# =======================================================
+# Ignorar todo el contenido de .local por defecto...
+.local/*
+
+# ...Permitir entrar a share, pero ignorar su contenido...
+!.local/share/
+.local/share/*
+
+# ...Y permitir SOLO los recursos visuales y sonoros:
+!.local/share/sounds/
+!.local/share/applications/
+!.local/share/icons/
+!.local/share/themes/
