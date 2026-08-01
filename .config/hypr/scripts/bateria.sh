@@ -16,5 +16,5 @@ while true; do
         ALERTA_ENVIADA=0
     fi
     
-    sleep 60
+    sleep 30
 done
