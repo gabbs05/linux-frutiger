@@ -8,11 +8,11 @@
     "height": 34,
     "position": "bottom",
 
-    "modules-center": [
+    "modules-right": [
         "clock"
     ],
 
-    "modules-right": [
+    "modules-center": [
         "tray",
         "network",
         "bluetooth",
@@ -110,10 +110,10 @@
 
     "custom/vpn": {
         "format": "{}",
-        "exec": "warp-cli status | grep -q 'Connected' && echo '🛡️✨ VPN' || echo '🛡️ VPN'",
+        "exec": "protonvpn status | grep -q 'Connected' && echo '🛡️✨ VPN' || echo '🛡️ VPN'",
         "interval": 2,
-        "on-click": "warp-cli connect & pw-play ~/.local/share/sounds/vpn.wav",
-        "on-click-right": "warp-cli disconnect & pw-play ~/.local/share/sounds/gota.wav",
+        "on-click": "protonvpn & protonvpn connect & pw-play ~/.local/share/sounds/vpn.wav & notify-send -u normal 'Proton VPN Activado' 'Tráfico encriptado y seguro' -i network-vpn",
+        "on-click-right": "protonvpn disconnect & pw-play ~/.local/share/sounds/gota.wav & notify-send -u normal 'Proton VPN Desconectado' 'Tráfico local restaurado' -i network-vpn",
         "tooltip": false
     },
     "privacy": {

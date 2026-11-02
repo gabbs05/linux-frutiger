@@ -9,7 +9,8 @@
 !.gitignore
 !.config/
 !.local/
-
+!.local/bin/
+!.local/bin/**
 # =======================================================
 # 3. LISTA BLANCA DE .CONFIG
 # =======================================================
@@ -32,6 +33,8 @@
 # =======================================================
 # Ignorar todo el contenido de .local por defecto...
 .local/*
+# Excluir lanzador de Hubstaff del repo público
+.local/share/applications/*hubstaff*
 
 # ...Permitir entrar a share, pero ignorar su contenido...
 !.local/share/
@@ -42,3 +45,20 @@
 !.local/share/applications/
 !.local/share/icons/
 !.local/share/themes/
+
+# Ignorar archivos de respaldo y temporales
+*.save
+*.bak
+*~
+
+# Ignorar base de datos de tipos MIME generada por el sistema
+.local/share/applications/mimeinfo.cache
+
+# Ignorar accesos directos de Wine y utilidades de terceros autogeneradas
+.local/share/applications/wine*
+.local/share/applications/wine/
+.local/share/applications/com.raspberrypi.rpi-imager*
+
+# Permitir únicamente la carpeta de iconos personalizados
+!.local/share/icons/
+!.local/share/icons/**
