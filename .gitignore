@@ -4,20 +4,27 @@
 /*
 
 # =======================================================
-# 2. Excepciones principales (Permitir entrar a estas carpetas)
+# 2. Archivos temporales, respaldos y cachés globales
+# =======================================================
+*.save
+*.bak
+*~
+*.cache
+mimeinfo.cache
+icon-theme.cache
+
+# =======================================================
+# 3. Excepciones principales de primer nivel
 # =======================================================
 !.gitignore
+!README.md
 !.config/
 !.local/
-!.local/bin/
-!.local/bin/**
-# =======================================================
-# 3. LISTA BLANCA DE .CONFIG
-# =======================================================
-# Ignorar todo el contenido de .config por defecto...
-.config/*
 
-# ...Y permitir SOLO las carpetas de nuestra interfaz:
+# =======================================================
+# 4. LISTA BLANCA DE .CONFIG
+# =======================================================
+.config/*
 !.config/hypr/
 !.config/kitty/
 !.config/waybar/
@@ -29,36 +36,35 @@
 !.config/nwg-look/
 
 # =======================================================
-# 4. LISTA BLANCA DE .LOCAL
+# 5. LISTA BLANCA DE .LOCAL
 # =======================================================
-# Ignorar todo el contenido de .local por defecto...
 .local/*
-# Excluir lanzador de Hubstaff del repo público
-.local/share/applications/*hubstaff*
 
-# ...Permitir entrar a share, pero ignorar su contenido...
+# Entrar a .local/bin pero permitir ÚNICAMENTE tus scripts (*.sh)
+# (Ignora binarios pesados como uv, uvx, herramientas de python, etc.)
+!.local/bin/
+.local/bin/*
+!.local/bin/*.sh
+
+# Recursos en .local/share
 !.local/share/
 .local/share/*
 
-# ...Y permitir SOLO los recursos visuales y sonoros:
+# Sonidos y temas
 !.local/share/sounds/
-!.local/share/applications/
-!.local/share/icons/
 !.local/share/themes/
 
-# Ignorar archivos de respaldo y temporales
-*.save
-*.bak
-*~
+# Iconos: ignorar cachés y cualquier carpeta "apps" (Wine / sistema)
+.local/share/icons/hicolor/icon-theme.cache
+.local/share/icons/*/apps/
+.local/share/icons/*/*/apps/
+!.local/share/icons/
 
-# Ignorar base de datos de tipos MIME generada por el sistema
+# Lanzadores (.desktop): ignorar basura del sistema y apps de terceros
+!.local/share/applications/
 .local/share/applications/mimeinfo.cache
-
-# Ignorar accesos directos de Wine y utilidades de terceros autogeneradas
+.local/share/applications/*hubstaff*
 .local/share/applications/wine*
 .local/share/applications/wine/
 .local/share/applications/com.raspberrypi.rpi-imager*
-
-# Permitir únicamente la carpeta de iconos personalizados
-!.local/share/icons/
-!.local/share/icons/**
+.local/share/applications/userapp-Firefox*
